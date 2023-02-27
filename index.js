@@ -28,7 +28,7 @@ conn.sync( { force: true } ).then( async () => {
     // The data from the DB or API is loaded after connecting to the DB and before starting the server
     await saveApiData()
     server.listen(port, () => {
-      console.log(`%s listening at ${ PORT }`); // eslint-disable-line no-console
+      console.log(`%s listening at ${ port }`); // eslint-disable-line no-console
     });
   } catch (error) {
     // Captures any errors that may exist if the data could not be loaded
