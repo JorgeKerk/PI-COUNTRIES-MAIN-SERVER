@@ -23,7 +23,7 @@ const { saveApiData } = require('./src/controllers');
 const port = process.env.PORT || 3001
 
 // Syncing all the models at once.
-conn.sync( { force: true } ).then( async () => {
+conn.sync( { force: false } ).then( async () => {
   try {
     // The data from the DB or API is loaded after connecting to the DB and before starting the server
     await saveApiData()
