@@ -32,6 +32,6 @@ conn.sync( { force: false } ).then( async () => {
     });
   } catch (error) {
     // Captures any errors that may exist if the data could not be loaded
-    console.log( `Server not up by ${ error.message }` );
+    console.error( `Server not up by ${ error.message }` );
   }
 });
